@@ -62,8 +62,8 @@ cd /app
 unzip -o /tmp/catalogue.zip &>> $LOGFILE
 VALIDATE $? "Unzip"
 
-npm install 
-VALIDATE $? "Installing NPM" &>> $LOGFILE
+npm install &>> $LOGFILE
+VALIDATE $? "Installing NPM" 
 
 cp /home/centos/Roboshop_Shellscripts/catalouge.service etc/systemd/system/catalogue.service &>> $LOGFILE
 VALIDATE $? "cp"
