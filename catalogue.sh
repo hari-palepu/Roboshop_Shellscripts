@@ -43,7 +43,7 @@ VALIDATE $? "Installing"
 id roboshop
 if [ $? -ne 0 ]
 then 
-   userdd roboshop
+   useradd roboshop
    VALIDATE $? "robo user creation"
 else
    echo "user exits"
