@@ -83,7 +83,7 @@ VALIDATE $? "cp"
 dnf install mongodb-org-shell -y &>> $LOGFILE
 VALIDATE $? "installng shl"
 
-mongo --host 172.31.44.187 </app/schema/catalogue.js &>> $LOGFILE
+mongo --host 172.31.46.70 </app/schema/catalogue.js &>> $LOGFILE
 VALIDATE $? "mg cnctd"
 
 
