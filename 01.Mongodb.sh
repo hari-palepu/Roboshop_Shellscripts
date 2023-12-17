@@ -31,7 +31,7 @@ VALIDATE(){
     fi
 }
 
-cp Mongo.repo /etc/yum.repos.d/ &>> $LOGFILE
+cp Mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 
 VALIDATE $? "Coppied Mongodb repo"
 
