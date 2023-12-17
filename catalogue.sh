@@ -65,7 +65,7 @@ VALIDATE $? "Unzip"
 npm install &>> $LOGFILE
 VALIDATE $? "Installing NPM" 
 
-cp /home/centos/Roboshop_Shellscripts/catalouge.service etc/systemd/system/catalogue.service &>> $LOGFILE
+cp /home/centos/Roboshop_Shellscripts/catalogue.service etc/systemd/system/catalogue.service &>> $LOGFILE
 VALIDATE $? "cp"
 
 systemctl daemon-reload &>> $LOGFILE
