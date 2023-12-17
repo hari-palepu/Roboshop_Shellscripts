@@ -77,7 +77,8 @@ VALIDATE $? "cenabling"
 systemctl start catalogue &>> $LOGFILE
 VALIDATE $? "starting"
 
-cp /home/centos/Roboshop_Shellscripts/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+#cp /home/centos/Roboshop_Shellscripts/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /home/centos/Roboshop_Shellscripts/Mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 VALIDATE $? "cp"
 
 dnf install mongodb-org-shell -y &>> $LOGFILE
