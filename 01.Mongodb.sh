@@ -24,9 +24,9 @@ NORMAL="\e[0m"
 VALIDATE(){
     if [ $1 = 0 ]
     then 
-      echo -e "$2... $RED Sucessful $NORAML "    
+      echo -e "$2... $G Sucessful $NORAML "    
     else
-      echo -e "$2...$G failed $NORMAL"
+      echo -e "$2...$RED failed $NORMAL"
       exit 1
     fi
 }
