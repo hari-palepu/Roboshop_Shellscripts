@@ -25,7 +25,7 @@ VALIDATE(){
 
 if [ $ID != 0 ]
 then
- echo "Error: Pleae run as root user"
+ echo "Error: $RED Pleae run as root user $NORMAL"
  exit 1 
 else 
  echo "Suessful: You are a root user"
@@ -51,7 +51,7 @@ fi
 
 VALIDATE $? "creating user"
 
-mkdir -p /app &>> $LOGFILE
+mkdir -p /app &>> $LOGFILE  # -p if the app folder is available it will ignore if not create 
 VALIDATE $? "Creatig app dir"
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>> $LOGFILE
@@ -59,11 +59,11 @@ VALIDATE $? "Downloading catloguge.zip"
 
 cd /app 
 
-unzip -o /tmp/catalogue.zip &>> $LOGFILE
+unzip -o /tmp/catalogue.zip &>> $LOGFILE  # o is to overwrite
 VALIDATE $? "Unzip"
 
 npm install &>> $LOGFILE
-VALIDATE $? "Installing NPM" 
+VALIDATE $? "Installing npm depncdies" 
 
 cp /home/centos/Roboshop_Shellscripts/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 VALIDATE $? "cp"
