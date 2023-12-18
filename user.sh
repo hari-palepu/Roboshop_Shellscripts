@@ -13,7 +13,7 @@ G="\e[32m"
 Yel="\e[33m"
 NORMAL="\e[0m"
 
-MONGOIP=172.31.41.95
+MONGOIP=172.31.32.44
 
 VALIDATE(){
     if [ $1 = 0 ]
@@ -86,4 +86,4 @@ dnf install mongodb-org-shell -y &>> $LOGFILE
 VALIDATE $? "installng shl"
 
 mongo --host $MONGOIP </app/schema/user.js &>> $LOGFILE
-VALIDATE $? "mongodb cnctd"
+VALIDATE $? "mongodbre cnctd"
