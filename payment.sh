@@ -48,7 +48,7 @@ VALIDATE $? "Curl- dowloding zip"
 cd /app  &>> $LOGFILE
 VALIDATE $? "Changing directory"
 
-unzip -0 /tmp/payment.zip &>> $LOGFILE
+unzip -o /tmp/payment.zip &>> $LOGFILE
 VALIDATE $? "Unzipping"
 
 pip3.6 install -r requirements.txt &>> $LOGFILE
