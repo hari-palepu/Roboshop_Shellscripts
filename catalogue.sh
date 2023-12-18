@@ -77,14 +77,14 @@ VALIDATE $? "cenabling"
 systemctl start catalogue &>> $LOGFILE
 VALIDATE $? "starting"
 
-#cp /home/centos/Roboshop_Shellscripts/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+
 cp /home/centos/Roboshop_Shellscripts/Mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
-VALIDATE $? "cp"
+VALIDATE $? "copied"
 
 dnf install mongodb-org-shell -y &>> $LOGFILE
 VALIDATE $? "installng shl"
 
-mongo --host 172.31.46.70 </app/schema/catalogue.js &>> $LOGFILE
+mongo --host $MONGOIP </app/schema/catalogue.js &>> $LOGFILE
 VALIDATE $? "mg cnctd"
 
 
