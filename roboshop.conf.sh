@@ -6,7 +6,7 @@ location /images/ {
 }
 location /api/catalogue/ { proxy_pass http://172.31.20.55:8080/; }
 location /api/user/ { proxy_pass http://172.31.22.222:8080/; }
-location /api/cart/ { proxy_pass http://172.31.18.3:8080/; }
+location /api/cart/ { proxy_pass http://172.31.44.63:8080/; }
 location /api/shipping/ { proxy_pass http://localhost:8080/; }
 location /api/payment/ { proxy_pass http://localhost:8080/; }
 
