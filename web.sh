@@ -53,7 +53,7 @@ VALIDATE $? "cd html"
 unzip -o /tmp/web.zip &>> $LOGFILE
 VALIDATE $? "unzip"
 
-cp /home/centos/Roboshop_Shellscripts/roboshop.conf.sh /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
+cp /home/centos/Roboshop_Shellscripts/roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
 VALIDATE $? "cp to etc"
 
 systemctl restart nginx &>> $LOGFILE
