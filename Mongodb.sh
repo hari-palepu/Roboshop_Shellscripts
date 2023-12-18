@@ -13,6 +13,8 @@ G="\e[32m"
 Yel="\e[33m"
 NORMAL="\e[0m"
 
+
+
 VALIDATE(){
     if [ $1 = 0 ]
     then 

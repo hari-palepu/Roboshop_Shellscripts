@@ -13,6 +13,8 @@ G="\e[32m"
 Yel="\e[33m"
 NORMAL="\e[0m"
 
+MONGOIP=172.31.32.204
+
 VALIDATE(){
     if [ $1 = 0 ]
     then 
