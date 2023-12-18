@@ -62,6 +62,8 @@ VALIDATE $? "Unzipping"
 pip3.6 install -r requirements.txt &>> $LOGFILE
 VALIDATE $? "Installing pip"
 
+cp /home/centos/Roboshop_Shellscripts/sh payment.service /etc/systemd/system/payment.service
+
 systemctl daemon-reload &>> $LOGFILE
 VALIDATE $? "Loading daemon"
 
