@@ -32,19 +32,30 @@ else
  echo "Suessful: You are a root user"
 fi
 
-dnf install nginx -y
+dnf install nginx -y &>> $LOGFILE
 VALIDATE $? "Installing nginx"
 
-systemctl enable nginx
+systemctl enable nginx &>> $LOGFILE
 VALIDATE $? "Enabling nginx"
 
-systemctl start nginx
+systemctl start nginx &>> $LOGFILE
 VALIDATE $? "Starting nginx"
 
-rm -rf /usr/share/nginx/html/*
+rm -rf /usr/share/nginx/html/* &>> $LOGFILE
+VALIDATE $? "Removing the html file"
 
-curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip
+curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip &>> $LOGFILE
+VALIDATE $? "Curl"
 
-cd /usr/share/nginx/html
+cd /usr/share/nginx/html &>> $LOGFILE
+VALIDATE $? "cd html"
 
+unzip -o /tmp/web.zip &>> $LOGFILE
+VALIDATE $? "unzip"
+
+cp /home/centos/Roboshop_Shellscripts/ronoshop.conf.sh /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
+VALIDATE $? "cp to etc"
+
+systemctl restart nginx &>> $LOGFILE
+VALIDATE $? "restarting"
 
