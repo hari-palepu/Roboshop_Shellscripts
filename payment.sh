@@ -36,7 +36,15 @@ fi
 dnf install python36 gcc python3-devel -y &>> $LOGFILE
 VALIDATE $? "Installing python"
 
-useradd roboshop &>> $LOGFILE
+id roboshop
+if [ $? -ne 0 ]
+then 
+   useradd roboshop
+   VALIDATE $? "robo user creation"
+else
+   echo "user exits"
+fi
+
 VALIDATE $? "Adding user"
 
 mkdir /app &>> $LOGFILE
