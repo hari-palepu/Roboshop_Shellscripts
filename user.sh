@@ -13,7 +13,7 @@ G="\e[32m"
 Yel="\e[33m"
 NORMAL="\e[0m"
 
-MONGOIP=172.31.39.110
+MONGOIP=mongodb.haripalepu.cloud
 
 VALIDATE(){
     if [ $1 = 0 ]
