@@ -27,7 +27,7 @@ VALIDATE(){
 
 if [ $ID != 0 ]
 then
- echo "Error: $RED Pleae run as root user $NORMAL"
+ echo -e "Error: $RED Pleae run as root user $NORMAL"
  exit 1 
 else 
  echo "Suessful: You are a root user"

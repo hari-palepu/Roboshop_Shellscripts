@@ -72,7 +72,7 @@ VALIDATE $? "Starting shipping"
 dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "Installing mysql"
 
-mysql -h 172.31.35.0 -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>> $LOGFILE
+mysql -h mysql.haripalepu.cloud -uroot -pRoboShop@1 < /app/schema/shipping.sql  &>> $LOGFILE
 VALIDATE $? "Setting the mysql password"
 
 systemctl restart shipping &>> $LOGFILE
